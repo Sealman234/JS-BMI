@@ -1,0 +1,19 @@
+// Pixel 2 XL Width
+@mixin Pixel2XL {
+    @media (max-width: 823px) {
+        @content;
+    }
+}
+// Galaxy S5 Height
+@mixin S5 {
+    @media (max-width: 640px){
+        @content;
+    }
+}
+
+// iPhone 6/7/8 Plus Width
+@mixin iPhone8p {
+    @media (max-width: 414px){
+        @content;
+    }
+}

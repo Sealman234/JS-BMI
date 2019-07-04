@@ -1,0 +1,270 @@
+@import 'reset';
+@import 'layout';
+@import 'grid';
+
+.header{
+    background: #424242;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    @include S5(){
+        display: block;
+        text-align: center;
+        height: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .logo{
+        display: block;
+        @include S5(){
+            padding-bottom: 20px;
+        }
+    }
+    .inputBlock{
+        display: flex;
+        flex-direction: column;
+        color: #FFD366;
+        padding-left: 97px;
+        padding-right: 53px;
+        @include S5(){
+            padding: 0;
+        }
+        span{
+            padding-bottom: 7px;
+        }
+        input{
+            background: rgba(255,255,255,0.18);
+            border: 2px solid #FFD366;
+            border-radius: 10px;
+            font-size: 24px;
+            line-height: 28px;
+            width: 250px;
+            margin-bottom: 23px;
+            text-indent: 16px;
+            color: #fff;
+            @include S5(){
+                margin: 0px auto;
+                margin-bottom: 23px;
+            }
+        }
+    }
+    .send{
+        display: block;
+        font-size: 24px;
+        color: #424242;
+        background: #FFD366;
+        width: 120px;
+        height: 120px;
+        border-radius: 120px;
+        border: 0px solid #FFD366;
+        @include S5(){
+            margin: 0 auto;
+        }
+        > span{
+            display: block;
+            padding-top: 48px;
+            text-align: center;
+            position: relative;
+            // 變色按鈕
+            p{
+                position: absolute;
+                font-size: 32px;
+                top: 38px;
+                left: 13.22px;
+            }
+            span{
+                position: absolute;
+                font-size: 14px;
+                top: 36px;
+                left: 27.33px;
+            }
+            p.status{
+                position: absolute;
+                display: inline-block;
+                text-align: left;
+                font-size: 32px;
+                top: 38px;
+                left: 132px;
+                width: 128px;
+                @include Pixel2XL(){
+                    display: none;
+                }
+            }
+        }
+        span.colorGreen{
+            color: #86D73F;
+        }
+        span.colorBlue{
+            color: #31BAF9;
+        }
+        span.colorOrange1{
+            color: #FF982D;
+        }
+        span.colorOrange2{
+            color: #FF6C02;
+        }
+        span.colorRed{
+            color: #FF1200;
+        }
+    }
+    a.colorGreen{
+        border: 6px solid #86D73E;
+        background: transparent;
+        color: #86D73E;
+        position: relative;
+        img{
+            background: #86D73E;
+            padding: 5px 8px;
+            border: 3px solid #424242;
+            border-radius: 30px;
+            position: absolute;
+            top: 75px;
+            left: 81px;
+        }
+    }
+    a.colorBlue{
+        border: 6px solid #31BAF9;
+        background: transparent;
+        position: relative;
+        img{
+            background: #31BAF9;
+            padding: 5px 8px;
+            border: 3px solid #424242;
+            border-radius: 30px;
+            position: absolute;
+            top: 75px;
+            left: 81px;
+        }
+    }
+    a.colorOrange1{
+        border: 6px solid #FF982D;
+        background: transparent;
+        position: relative;
+        img{
+            background: #FF982D;
+            padding: 5px 8px;
+            border: 3px solid #424242;
+            border-radius: 30px;
+            position: absolute;
+            top: 75px;
+            left: 81px;
+        }
+    }
+    a.colorOrange2{
+        border: 6px solid #FF6C02;
+        background: transparent;
+        position: relative;
+        img{
+            background: #FF6C02;
+            padding: 5px 8px;
+            border: 3px solid #424242;
+            border-radius: 30px;
+            position: absolute;
+            top: 75px;
+            left: 81px;
+        }
+    }
+    a.colorRed{
+        border: 6px solid #FF1200;
+        background: transparent;
+        position: relative;
+        img{
+            background: #FF1200;
+            padding: 5px 8px;
+            border: 3px solid #424242;
+            border-radius: 30px;
+            position: absolute;
+            top: 75px;
+            left: 81px;
+        }
+    }
+    // 變色按鈕 End
+    a.init:hover{
+        background: #FFD366;
+        box-shadow: 0 1px 6px 3px rgba(255,195,49,0.64);
+    }
+}
+.main{
+    background: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 74px;
+    h2{
+        font-size: 24px;
+        color: #424242;
+        line-height: 28px;
+        padding-top: 48px;
+        padding-bottom: 36px;
+    }
+    .list{
+        padding-bottom: 16px;
+        max-width: 100%; // 不要有 X 軸
+        li{
+            background: #FFFFFF;
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 1px 20px 12px;
+            width: 600px;
+            max-width: 100%; // 不要有 X 軸
+            flex-wrap: wrap;
+            @include iPhone8p(){
+                span{
+                    display: none;
+                }
+            }
+        }
+        p{
+            font-size: 20px;
+            color: #4A4A4A;
+            line-height: 23px;
+        }
+        p.status{
+            width: 80px;
+        }
+        span{
+            font-size: 12px;
+            color: #424242;
+            padding-right: 7px;
+            line-height: 15px;
+        }
+        .colorGreen{
+            border-left: 7px solid #86D73F;
+        }
+        .colorBlue{
+            border-left: 7px solid #31BAF9;
+        }
+        .colorOrange1{
+            border-left: 7px solid #FF982D;
+        }
+        .colorOrange2{
+            border-left: 7px solid #FF6C02;
+        }
+        .colorOrange3{
+            border-left: 7px solid #FF6C02;
+        }
+        .colorRed{
+            border-left: 7px solid #FF1200;
+        }
+    }
+    a.clear{
+        display: block;
+        font-size: 20px;
+        color: #424242;
+        padding: 10px;
+        border: 2px solid #424242;
+        border-radius: 22px;
+    }
+}
+.footer{
+    background: #FFD366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        padding: 17.5px 0px;
+    }
+}
