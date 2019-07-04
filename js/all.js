@@ -79,7 +79,7 @@ function updataList(items){
         // list
         str += '<li data-index="'+i+'" class="'+items[i].Color+'"><p class="status">'+items[i].Status+'</p><p><span>BMI</span>'+items[i].BMI+'</p><p><span>weight</span>'+items[i].weight+' kg</p><p><span>height</span>'+items[i].height+' cm</p><span>'+items[i].date+'</span></li>';
         // 變色按鈕
-        str_button = '<img src="/images/icons_loop.png"><span class="'+items[i].Color+'"><p>'+items[i].BMI+'<span>BMI</span><p class="status">'+items[i].Status+'</p></span>';
+        str_button = '<img src="./images/icons_loop.png"><span class="'+items[i].Color+'"><p>'+items[i].BMI+'<span>BMI</span><p class="status">'+items[i].Status+'</p></span>';
     }
     list.innerHTML = str; // list
     // 變色按鈕
